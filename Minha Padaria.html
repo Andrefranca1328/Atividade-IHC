@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Padaria</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-left">
+            <a href="./" class="brand" aria-label="Minha Padaria - voltar para a página inicial">
+                <svg class="logo" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title">
+                    <title id="logo-title">Logo Minha Padaria</title>
+                    <image href="https://cdn-icons-png.flaticon.com/512/5017/5017445.png" width="64" height="64" preserveAspectRatio="xMidYMid slice" />
+                </svg>
+                <span class="brand-text">Minha Padaria</span>
+            </a>
+        </div>
+
+        <div class="header-right">
+            <form class="search" role="search" aria-label="Pesquisar produtos">
+                <label for="search-input" class="visually-hidden">Pesquisar</label>
+                <input id="search-input" type="search" placeholder="Buscar pães, doces ou salgados" aria-label="Buscar produtos">
+                <button type="button" id="clear-search" aria-label="Limpar busca">✕</button>
+            </form>
+
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#doces">Doces</a></li>
+                    <li><a href="#salgados">Salgados</a></li>
+                    <li><a href="#encomendas">Encomendas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="cart-btn" id="cart-btn" aria-label="Ver carrinho">
+                🧺 <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="destaque" aria-labelledby="hero-title">
+            <h1 id="hero-title">Sinta o cheiro do pão quentinho</h1>
+            <div class="destaque-resumo">
+                <img src="img1.jpg" alt="Interior da padaria com pães" onerror="this.style.display='none'">
+                <p>Na <strong>Minha Padaria</strong> nossos produtos são feitos com ingredientes selecionados e carinho. Navegue pelo cardápio e adicione ao carrinho com um clique.</p>
+            </div>
+        </section>
+
+        <section id="cardapio" class="cardapio" aria-labelledby="cardapio-title">
+            <h2 id="cardapio-title">Cardápio</h2>
+            <img src="padaria02.png" alt="Cardápio da padaria">
+
+            <h3 id="doces">Doces</h3>
+            <div class="card-list">
+                <article class="card-food" data-name="Pão de Mel">
+                    <img src="https://s2-receitas.glbimg.com/XGFcbKYIsP0eILlM_RSra2-IDfI=/0x0:750x440/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/N/P/Jz2YL1QKGzfQGCqXUlwg/pao-de-mel.jpg" alt="Pão de mel" onerror="this.style.display='none'">
+                    <h4>Pão de Mel</h4>
+                    <p class="descricao">Recheado com doce de leite e cobertura de chocolate.</p>
+                    <form class="add-form" aria-label="Adicionar pão de mel ao carrinho">
+                        <label for="qtd-mel" class="visually-hidden">Quantidade Pão de Mel</label>
+                        <input id="qtd-mel" class="qtd" name="qtd" type="number" min="1" value="1" aria-label="Quantidade">
+                        <button class="btn add" type="submit">Adicionar ao carrinho</button>
+                    </form>
+                </article>
+
+                <article class="card-food" data-name="Croissant">
+                    <img src="data:image/jpeg;base64,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" alt="Croissant" onerror="this.style.display='none'">
+                    <h4>Croissant</h4>
+                    <p class="descricao">Leve e folhado, perfeito para o café.</p>
+                    <form class="add-form" aria-label="Adicionar croissant ao carrinho">
+                        <label class="visually-hidden" for="qtd-cro">Quantidade Croissant</label>
+                        <input id="qtd-cro" class="qtd" name="qtd" type="number" min="1" value="1" aria-label="Quantidade">
+                        <button class="btn add" type="submit">Adicionar ao carrinho</button>
+                    </form>
+                </article>
+            </div>
+
+            <h3 id="salgados">Salgados</h3>
+            <div class="card-list">
+                <article class="card-food" data-name="Esfiha">
+                    <img src="https://s2-receitas.glbimg.com/LTbh815cCJmCKarL0BrX0iqDpkQ=/1366x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2025/6/i/z2mrzpRXSuGOzSUMEjyg/esfiha-de-carne-moida-receita.jpg" alt="esfiha">
+                    <h4>Esfiha</h4>
+                    <p class="descricao">Assada na hora.</p>
+                    <form class="add-form" aria-label="Adicionar esfiha ao carrinho">
+                        <label class="visually-hidden" for="qtd-esf">Quantidade Esfiha</label>
+                        <input id="qtd-esf" class="qtd" name="qtd" type="number" min="1" value="1" aria-label="Quantidade">
+                        <button class="btn add" type="submit">Adicionar ao carrinho</button>
+                    </form>
+                </article>
+                <article class="card-food" data-name="Coxinha">
+                    <img src="https://cdn.casaeculinaria.com/wp-content/uploads/2023/05/16114400/Massa-de-coxinha.webp" alt="coxinha">
+                    <h4>Coxinha</h4>
+                    <p class="descricao">Assada na hora.</p>
+                    <form class="add-form" aria-label="Adicionar esfiha ao carrinho">
+                        <label class="visually-hidden" for="qtd-esf">Quantidade Coxinha</label>
+                        <input id="qtd-esf" class="qtd" name="qtd" type="number" min="1" value="1" aria-label="Quantidade">
+                        <button class="btn add" type="submit">Adicionar ao carrinho</button>
+                    </form>
+                </article>
+            </div>
+
+            <h3 id="encomendas">Encomendas</h3>
+            <p class="encomendas-msg">Para encomendas grandes, <a href="#contato">entre em contato</a> com nossa equipe.</p>
+        </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <footer id="contato">
+        <p>&copy; 2025 Minha Padaria - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
