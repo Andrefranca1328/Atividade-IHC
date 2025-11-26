@@ -1,17 +1,4 @@
 ﻿# Minha Padaria — Entrega da Atividade
-
-FATEC COTIA
-
-Aluno(a): ____________________  R.A.: ______________
-
-Curso: DSM  •  Disciplina: Interação Humano-Computador
-
-Semestre Letivo: 2025  •  Período: Noturno  •  Semestre: 3º
-
-Prof.: Eduardo Tadeu de Almeida
-
-Data da Avaliação: 26/11/2025
-
 ---
 
 Este README responde às questões da atividade e descreve as melhorias aplicadas no site `Minha Padaria.html`, evidências de implementação e instruções para publicação.
@@ -125,4 +112,5 @@ Observações finais e próximos passos
 	- Ajustar responsividade (por exemplo, empilhar a imagem `img1.jpg` acima do texto em telas pequenas).
 
 ---
+
 
